@@ -42,6 +42,6 @@ class HomeController extends Controller
 
         $buildResponse = (new \App\Connection(config('kuis88.client_id'), config('kuis88.client_secret')))->getUser($user);
 
-        return response()->json($buildResponse, 200);
+        return response()->json($buildResponse, 200)->withCallback($request->input('callback'));
     }
 }

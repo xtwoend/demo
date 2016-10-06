@@ -30,7 +30,7 @@ class HomeController extends Controller
      * [activeUser description]
      * @return [type] [description]
      */
-    public function activeUser()
+    public function activeUser(Request $request)
     {   
         $row = \Auth::user();
         $user = [
